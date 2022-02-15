@@ -1,6 +1,6 @@
-@rem OneDrive Complete uninstaller batch process for Windows 10.
+@rem OneDrive Complete uninstaller batch process for Windows 10/11.
 @rem Run as administrator to completely delete all OneDrive components and files.
-@rem Written by TERRA Operative - 2020/03/02. V1.4
+@rem Written by TERRA Operative - 2020/03/02.
 @rem Feel free to distribute freely as long as you leave this entire file unchanged and intact,
 @rem and if you do make changes and adaptions, don't be a dick about not attributing where due.
 @rem And most importantly, peace out and keep it real.
@@ -20,23 +20,23 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
 
-   echo            ��⵽����Ա����Ȩ������
+   echo            检测到管理员身份权限运行
    echo.
 ) ELSE (
 
    echo.
-   call :colorEcho 0C "########### ������ʾ����Ҫ����ԱȨ�� #############"
+   call :colorEcho 0C "########### 错误提示：需要管理员权限 #############"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " �˽ű������Թ���Ա�������в�����������"  
+   call :colorEcho 07 " 此脚本必须以管理员身份运行才能正常工作"  
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " �������˫��ͼ��󿴵������ʾ,�����´�"
+   call :colorEcho 07 " 如果你在双击图标后看到这个提示,请重新打开"
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " Ȼ���Ҽ�����ͼ�겢ѡ���Թ���Ա�������С�"
+   call :colorEcho 07 " 然后右键单击图标并选择“以管理员身份运行”"
    call :colorEcho 0C "#"
    echo.
    call :colorEcho 0C "#############################################"
@@ -48,22 +48,22 @@ IF %ERRORLEVEL% EQU 0 (
 )
 
    echo -----------------------------------------------
-   call :colorEcho 0C "                ��ܰ��ʾ��"
+   call :colorEcho 0C "                温馨提示："
    echo.
-   call :colorEcho 0C "           �˽ű�����ȫ�����õ�"
+   call :colorEcho 0C "           此脚本将完全且永久地"
    echo.
-   call :colorEcho 0C "           �Ӽ������ɾ��OneDrive"
+   call :colorEcho 0C "           从计算机上删除OneDrive"
    echo.
-   call :colorEcho 0C "           ��ȷ������OneDrive�ĵ� "   
+   call :colorEcho 0C "           请确保所有OneDrive文档 "   
    echo.
-   call :colorEcho 0C "           ���ڱ��ش洢����ȫ�ָ� "
+   call :colorEcho 0C "           已在本地存储的完全恢复 "
    echo.
-   call :colorEcho 0C "           �ڼ���֮ǰ�ǵñ����ļ�  "   
+   call :colorEcho 0C "           在继续之前记得备份文件  "   
    echo.
    echo -----------------------------------------------
    echo.
 
-   SET /P M=  ����Y�����������κ��������˳��� 
+   SET /P M=  按“Y”继续，或按任何其他键退出。 
    if %M% ==Y goto PROCESSKILL
    if %M% ==y goto PROCESSKILL
 
@@ -126,7 +126,6 @@ GOTO CLEAN
    echo.
 
 
-
 @rem Delete and remove OneDrive in file explorer folder tree registry key
    echo -----------------------------------------------
    echo.
@@ -138,12 +137,12 @@ GOTO CLEAN
 
    echo.
    echo.
-   echo ϵͳ�Ҳ���ָ����ע������ֵ��
-   echo ���ִ����������ģ�����ζ��ע������Ѿ������ڡ�
+   echo 系统找不到指定的注册表项或值。
+   echo 出现错误是正常的，这意味着注册表项已经不存在。
    echo.
    echo -----------------------------------------------
    echo.
-   echo OneDriveж�غ����������.
+   echo OneDrive卸载和清理已完成.
    echo.
 
    PAUSE
