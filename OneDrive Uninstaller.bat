@@ -119,10 +119,10 @@ GOTO CLEAN
    del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" /s /f /q
    
    echo.
-   call :colorEcho 0C "If you see 'access denied' errors here, reboot and run this batch file again."
+   call :colorEcho 0C "如果在此处看到“拒绝访问”错误，请重新启动并再次运行此批处理文件"
    echo.
    echo.
-   echo 'The system cannot find the file specified.' errors are ok, it means the files are already gone.
+   echo “系统找不到指定的文件”错误没有问题，这意味着文件已经不存在了。
    echo.
 
 
