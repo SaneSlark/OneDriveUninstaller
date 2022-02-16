@@ -20,23 +20,23 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
 
-   echo            ¼ì²âµ½¹ÜÀíÔ±Éí·ÝÈ¨ÏÞÔËÐÐ
+   echo            æ£€æµ‹åˆ°ç®¡ç†å‘˜èº«ä»½æƒé™è¿è¡Œ
    echo.
 ) ELSE (
 
    echo.
-   call :colorEcho 0C "########### ´íÎóÌáÊ¾£ºÐèÒª¹ÜÀíÔ±È¨ÏÞ #############"
+   call :colorEcho 0C "########### é”™è¯¯æç¤ºï¼šéœ€è¦ç®¡ç†å‘˜æƒé™ #############"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " ´Ë½Å±¾±ØÐëÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ²ÅÄÜÕý³£¹¤×÷ "  
+   call :colorEcho 07 " æ­¤è„šæœ¬å¿…é¡»ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œæ‰èƒ½æ­£å¸¸å·¥ä½œ "  
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " ÈôÄúÔÚË«»÷Í¼±êºó¿´µ½Õâ¸öÌáÊ¾,ÇëÖØÐÂ´ò¿ª "
+   call :colorEcho 07 " è‹¥æ‚¨åœ¨åŒå‡»å›¾æ ‡åŽçœ‹åˆ°è¿™ä¸ªæç¤º,è¯·é‡æ–°æ‰“å¼€ "
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " È»ºóÓÒ¼üµ¥»÷Í¼±ê²¢Ñ¡Ôñ¡°ÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ¡± "
+   call :colorEcho 07 " ç„¶åŽå³é”®å•å‡»å›¾æ ‡å¹¶é€‰æ‹©â€œä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œâ€ "
    call :colorEcho 0C "#"
    echo.
    call :colorEcho 0C "#############################################"
@@ -48,22 +48,22 @@ IF %ERRORLEVEL% EQU 0 (
 )
 
    echo -----------------------------------------------
-   call :colorEcho 0C "                ÎÂÜ°ÌáÊ¾£º "
+   call :colorEcho 0C "                æ¸©é¦¨æç¤ºï¼š "
    echo.
-   call :colorEcho 0C "           ´Ë½Å±¾½«ÍêÈ«ÇÒÓÀ¾ÃµØ "
+   call :colorEcho 0C "           æ­¤è„šæœ¬å°†å®Œå…¨ä¸”æ°¸ä¹…åœ° "
    echo.
-   call :colorEcho 0C "           ´Ó¼ÆËã»úÉÏÉ¾³ýOneDrive "
+   call :colorEcho 0C "           ä»Žè®¡ç®—æœºä¸Šåˆ é™¤OneDrive "
    echo.
-   call :colorEcho 0C "           ÇëÈ·±£ËùÓÐOneDriveÎÄµµ "   
+   call :colorEcho 0C "           è¯·ç¡®ä¿æ‰€æœ‰OneDriveæ–‡æ¡£ "   
    echo.
-   call :colorEcho 0C "           ÒÑÔÚ±¾µØ´æ´¢µÄÍêÈ«»Ö¸´ "
+   call :colorEcho 0C "           å·²åœ¨æœ¬åœ°å­˜å‚¨çš„å®Œå…¨æ¢å¤ "
    echo.
-   call :colorEcho 0C "           ÔÚ¼ÌÐøÖ®Ç°¼ÇµÃ±¸·ÝÎÄ¼þ "   
+   call :colorEcho 0C "           åœ¨ç»§ç»­ä¹‹å‰è®°å¾—å¤‡ä»½æ–‡ä»¶ "   
    echo.
    echo -----------------------------------------------
    echo.
 
-   SET /P M=  °´¡°Y¡±¼ÌÐø£¬»ò°´ÈÎºÎÆäËû¼üÍË³ö¡£ 
+   SET /P M=  æŒ‰â€œYâ€ç»§ç»­ï¼Œæˆ–æŒ‰ä»»ä½•å…¶ä»–é”®é€€å‡ºã€‚ 
    if %M% ==Y goto PROCESSKILL
    if %M% ==y goto PROCESSKILL
 
@@ -119,10 +119,10 @@ GOTO CLEAN
    del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" /s /f /q
    
    echo.
-   call :colorEcho 0C "Èç¹ûÔÚ´Ë´¦¿´µ½¡°¾Ü¾ø·ÃÎÊ¡±´íÎó£¬ÇëÖØÐÂÆô¶¯²¢ÔÙ´ÎÔËÐÐ´ËÅú´¦ÀíÎÄ¼þ"
+   call :colorEcho 0C "å¦‚æžœåœ¨æ­¤å¤„çœ‹åˆ°â€œæ‹’ç»è®¿é—®â€é”™è¯¯ï¼Œè¯·é‡æ–°å¯åŠ¨å¹¶å†æ¬¡è¿è¡Œæ­¤æ‰¹å¤„ç†æ–‡ä»¶"
    echo.
    echo.
-   echo ¡°ÏµÍ³ÕÒ²»µ½Ö¸¶¨µÄÎÄ¼þ¡±´íÎóÃ»ÓÐÎÊÌâ£¬ÕâÒâÎ¶×ÅÎÄ¼þÒÑ¾­²»´æÔÚÁË¡£
+   echo â€œç³»ç»Ÿæ‰¾ä¸åˆ°æŒ‡å®šçš„æ–‡ä»¶â€é”™è¯¯æ²¡æœ‰é—®é¢˜ï¼Œè¿™æ„å‘³ç€æ–‡ä»¶å·²ç»ä¸å­˜åœ¨äº†ã€‚
    echo.
 
 
@@ -137,12 +137,12 @@ GOTO CLEAN
 
    echo.
    echo.
-   echo ÏµÍ³ÕÒ²»µ½Ö¸¶¨µÄ×¢²á±íÏî»òÖµ¡£
-   echo ³öÏÖ´íÎóÊÇÕý³£µÄ£¬ÕâÒâÎ¶×Å×¢²á±íÏîÒÑ¾­²»´æÔÚ¡£
+   echo ç³»ç»Ÿæ‰¾ä¸åˆ°æŒ‡å®šçš„æ³¨å†Œè¡¨é¡¹æˆ–å€¼ã€‚
+   echo å‡ºçŽ°é”™è¯¯æ˜¯æ­£å¸¸çš„ï¼Œè¿™æ„å‘³ç€æ³¨å†Œè¡¨é¡¹å·²ç»ä¸å­˜åœ¨ã€‚
    echo.
    echo -----------------------------------------------
    echo.
-   echo OneDriveÐ¶ÔØºÍÇåÀíÒÑÍê³É.
+   echo OneDriveå¸è½½å’Œæ¸…ç†å·²å®Œæˆ.
    echo.
 
    PAUSE
@@ -150,7 +150,7 @@ GOTO CLEAN
    PING -n 2 127.0.0.1>nul
    EXIT /B 1
 
-   
+  
 @rem Settings for text colour
 
 :colorEcho
