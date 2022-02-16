@@ -32,7 +32,7 @@ IF %ERRORLEVEL% EQU 0 (
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
-   call :colorEcho 07 " 如果你在双击图标后看到这个提示,请重新打开"
+   call :colorEcho 07 " 若您在双击图标后看到这个提示,请重新打开"
    call :colorEcho 0C " #"
    echo.
    call :colorEcho 0C "#"
@@ -48,17 +48,17 @@ IF %ERRORLEVEL% EQU 0 (
 )
 
    echo -----------------------------------------------
-   call :colorEcho 0C "                温馨提示："
+   call :colorEcho 0C "                温馨提示： "
    echo.
-   call :colorEcho 0C "           此脚本将完全且永久地"
+   call :colorEcho 0C "           此脚本将完全且永久地 "
    echo.
-   call :colorEcho 0C "           从计算机上删除OneDrive"
+   call :colorEcho 0C "           从计算机上删除OneDrive "
    echo.
    call :colorEcho 0C "           请确保所有OneDrive文档 "   
    echo.
    call :colorEcho 0C "           已在本地存储的完全恢复 "
    echo.
-   call :colorEcho 0C "           在继续之前记得备份文件  "   
+   call :colorEcho 0C "           在继续之前记得备份文件 "   
    echo.
    echo -----------------------------------------------
    echo.
